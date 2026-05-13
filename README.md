@@ -2,7 +2,7 @@
 
 An interactive web dashboard visualising key macroeconomic indicators for Ghana, built using real Bank of Ghana data trends (2010–2024).
 
-**Live Demo:** [your-app.onrender.com](#) &nbsp;|&nbsp; **Portfolio:** [linkedin.com/in/bernardasibu](https://linkedin.com/in/asibubernard)
+**Live Demo:** [https://macro-dashboard-ndm9.onrender.com/](#) &nbsp;|&nbsp; **Portfolio:** [linkedin.com/in/bernardasibu](https://linkedin.com/in/asibubernard)
 
 ---
 
