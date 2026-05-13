@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ghana Macroeconomic Dashboard | Bank of Ghana Data</title>
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="logo-area">
+      <div class="logo-circle">🇬🇭</div>
+      <div>
+        <h1>Ghana Macroeconomic Dashboard</h1>
+        <p>Key Indicators · Bank of Ghana Data · 2010–2024</p>
+      </div>
+    </div>
+    <div class="header-meta">Built by Bernard Asibu · Data Analytics Portfolio</div>
+  </div>
+</header>
+
+<main>
+  <!-- KPI Cards -->
+  <section class="kpi-row" id="kpi-row">
+    <div class="kpi-card" id="kpi-inflation">
+      <div class="kpi-label">Headline Inflation</div>
+      <div class="kpi-value" id="val-inflation">—</div>
+      <div class="kpi-change" id="chg-inflation"></div>
+    </div>
+    <div class="kpi-card" id="kpi-gdp">
+      <div class="kpi-label">GDP Growth Rate</div>
+      <div class="kpi-value" id="val-gdp">—</div>
+      <div class="kpi-change" id="chg-gdp"></div>
+    </div>
+    <div class="kpi-card" id="kpi-fx">
+      <div class="kpi-label">USD / GHS Rate</div>
+      <div class="kpi-value" id="val-fx">—</div>
+      <div class="kpi-change" id="chg-fx"></div>
+    </div>
+    <div class="kpi-card" id="kpi-policy">
+      <div class="kpi-label">Policy Rate</div>
+      <div class="kpi-value" id="val-policy">—</div>
+      <div class="kpi-change" id="chg-policy"></div>
+    </div>
+  </section>
+
+  <!-- Charts Row 1 -->
+  <section class="charts-row">
+    <div class="chart-card wide">
+      <div class="chart-title">Inflation vs Policy Rate (%)</div>
+      <div id="chart-inflation" class="chart"></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">GDP Growth Rate (%)</div>
+      <div id="chart-gdp" class="chart"></div>
+    </div>
+  </section>
+
+  <!-- Charts Row 2 -->
+  <section class="charts-row">
+    <div class="chart-card">
+      <div class="chart-title">USD/GHS Exchange Rate</div>
+      <div id="chart-fx" class="chart"></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Private Sector Credit Growth (%)</div>
+      <div id="chart-credit" class="chart"></div>
+    </div>
+  </section>
+
+  <!-- Charts Row 3 — Banking Sector -->
+  <section class="charts-row">
+    <div class="chart-card">
+      <div class="chart-title">Banking Sector Total Assets (GHS Bn)</div>
+      <div id="chart-assets" class="chart"></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">NPL Ratio vs Capital Adequacy (%)</div>
+      <div id="chart-npl" class="chart"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Data sourced from Bank of Ghana Statistical Bulletins &amp; Annual Reports.
+    Built with Python · Flask · Plotly.js · SQLite &nbsp;|&nbsp;
+    <a href="https://github.com/asibubernard" target="_blank">github.com/asibubernard</a></p>
+  </footer>
+</main>
+
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
